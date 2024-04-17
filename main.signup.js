@@ -40,7 +40,7 @@ function addAccount() {
     console.log("Account added:", email);
 
     // Redirect to login page
-    window.location.href = "./index.login.html";
+    window.location.href = "./index.html";
 }
 
 // Other JavaScript code

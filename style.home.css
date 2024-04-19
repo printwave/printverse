@@ -25,6 +25,42 @@ body, html {
     background: green;
     color: #333;
 }
+.gap {
+    height: 10px; /* Adjust the height as needed */
+    background-color: #ccc; /* Set the color of the gap */
+    margin: 20px 0; /* Set the margin to create space above and below */
+}
+.search-bar {
+    display: block;
+    width: 400px; /* Adjust the width as needed */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+.search-bar.large {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.print-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: white;
+    color: #333;
+}
 .input-field {
     display: block;
     width: 400px; /* Adjust the width as needed */

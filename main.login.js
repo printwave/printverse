@@ -8,8 +8,11 @@ function login() {
     // Check if the email and password match a user in the userList
     var userFound = userList.some(user => user.email === email && user.password === password);
 
-    // If user is found, redirect to the dashboard or desired page
+    // If user is found, set a session variable and redirect to the dashboard or desired page
     if (userFound) {
+        // Set a session variable to indicate that the user is logged in
+        sessionStorage.setItem('isLoggedIn', true);
+        // Add event listener to handle page unload
         window.location.href = "./index.home.html";
     } else {
         alert("Invalid email or password. Please try again.");
@@ -18,3 +21,4 @@ function login() {
         document.getElementById("loginPassword").value = "";
     }
 }
+

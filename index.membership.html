@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.home.css">
+    <title>Membership Plans</title>
+    <style>
+        .plan {
+            width: 200px;
+            height: 300px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 20px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Your Membership Plan</h1>
+    <div class="plan">
+        <h2>Free</h2>
+        <p>Price Free</p>
+        <ul>
+            <li>Perk 1</li>
+            <li>Perk 2</li>
+            <li>Perk 3</li>
+        </ul>
+    </div>
+    <div class="plan" onclick="buyPlan('pro')">
+        <h2>Pro</h2>
+        <p>Price: $1/month</p>
+        <ul>
+            <li>Perk 1</li>
+            <li>Perk 2</li>
+            <li>Perk 3</li>
+        </ul>
+    </div>
+    <div class="plan" onclick="buyPlan('premium')">
+        <h2>Premium</h2>
+        <p>Price: $5/month</p>
+        <ul>
+            <li>Perk 1</li>
+            <li>Perk 2</li>
+            <li>Perk 3</li>
+        </ul>
+    </div>
+    <div class="plan" onclick="buyPlan('ultra')">
+        <h2>Ultra</h2>
+        <p>Price: $15/month</p>
+        <ul>
+            <li>Perk 1</li>
+            <li>Perk 2</li>
+            <li>Perk 3</li>
+        </ul>
+    </div>
+
+    <script>
+        function buyPlan(plan) {
+            // Redirect to the corresponding plan page
+            window.location.href = `index.${plan}.html`;
+
+            // After purchasing, set the corresponding plan variable to true
+            localStorage.setItem(`${plan}_plan_purchased`, true);
+        }
+    </script>
+</body>
+</html>

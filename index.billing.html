@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+</head>
+<body>
+    <h1>Subscribe to Pro Membership</h1>
+    <p>Price: $1/month</p>
+    <!-- PayPal button container -->
+    <div id="paypal-button-container"></div>
+
+    <!-- Include PayPal SDK script with your client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AfV9qON177fZE7hhq0CWGG5WT-VnkrdrtGmP58_KD0J4bc1fqrtSZXirri_iMwg4DyM580oFiUoroBSG&currency=USD"></script>
+
+    <script>
+        // Render PayPal subscription button
+        paypal.Buttons({
+            createSubscription: function(data, actions) {
+                return actions.subscription.create({
+                    plan_id: 'YOUR_PLAN_ID_HERE' // Replace with your PayPal subscription plan ID
+                });
+            },
+            onApprove: function(data, actions) {
+                // Subscription was approved
+                alert('Subscription successful!');
+            },
+            onError: function(err) {
+                // Subscription failed
+                console.error(err);
+                alert('Subscription failed. Please try again later.');
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>

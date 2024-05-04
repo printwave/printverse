@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printverse</title>
-    <link rel="stylesheet" href="style.home.css">
-    <!-- Include PayPal SDK script with your client ID -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AfV9qON177fZE7hhq0CWGG5WT-VnkrdrtGmP58_KD0J4bc1fqrtSZXirri_iMwg4DyM580oFiUoroBSG&currency=USD"></script>
+    <title>Premium Membership</title>
 </head>
 <body>
-    <h2>Joystick</h2>
-    <a href="./index.joystick.html"><button class="button">Joystick</button></a><br>
-    <img src="joy1.jpg" alt="Joystick Fidget" width="200" height="200">
-    <img src="joy3.jpg" alt="Joystick Fidget" width="200" height="200">
-    <img src="joy2.jpg" alt="Joystick Fidget" width="200" height="200">
-    <img src="joy4.jpg" alt="Joystick Fidget" width="200" height="200">
-
+    <h1>Pro Membership</h1>
+    <p>Price: $10</p>
     <!-- PayPal button container -->
     <div id="paypal-button-container"></div>
+
+    <!-- Include PayPal SDK script with your client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AfV9qON177fZE7hhq0CWGG5WT-VnkrdrtGmP58_KD0J4bc1fqrtSZXirri_iMwg4DyM580oFiUoroBSG&currency=USD"></script>
 
     <script>
         // Render PayPal button
@@ -27,7 +22,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '1.00', // Set the amount dynamically if needed
+                            value: '10.00', // Set the amount dynamically if needed
                             currency_code: 'USD'
                         }
                     }]

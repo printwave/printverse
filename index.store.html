@@ -21,11 +21,23 @@
     <h1>Recommended</h1>
     <h2>Joystick</h2><a href="./index.joystick.html"><button class="button">Joystick</button></a><br>
     <img src="joy1.jpg" alt="Joystick Fidget" width="200" height="200"><img src="joy3.jpg" alt="Joystick Fidget" width="200" height="200"><img src="joy2.jpg" alt="Joystick Fidget" width="200" height="200"><img src="joy4.jpg" alt="Joystick Fidget" width="200" height="200">
-    <h2>TNT</h2><a href="./index.TNT.html"><button class="button">TNT</button></a><br>
+    <h2>tnt</h2><a href="./index.tnt.html"><button class="button">TNT</button></a><br>
     <img src="tnt3.JPG" alt="Tnt 1" width="200" height="200"><img src="tnt2.JPG" alt="Tnt 1" width="200" height="200"><img src="tnt1.JPG" alt="Tnt 1" width="200" height="200">
     <h2>ball</h2><a href="index.ball.html"><button class="button">Ball</button></a><br>
-    <img src="ball1.JPG" alt="Tnt 1" width="200" height="200"><img src="ball2.JPG" alt="Tnt 1" width="200" height="200"><img src="ball3.JPG" alt="Tnt 1" width="200" height="200"><br>
+    <img src="ball1.JPG" alt="Tnt 1" width="200" height="200"><img src="ball2.JPG" alt="Tnt 1" width="200" height="200"><img src="ball3.JPG" alt="Tnt 1" width="200" height="200">
+
+    <!-- Button for pro users -->
+    <div id="proButtonContainer" style="display: none;">
+        <h2>Fish</h2><a href="./index.fish.html"><button class="button">Fish</button></a><br>
+    </div>
 
     <script src="main.home.js"></script>
+    <script>
+        // Check if the user is a pro member
+        var pro = true; // Assuming it's initially false, replace it with your actual logic
+        if (pro) {
+            document.getElementById("proButtonContainer").style.display = "block"; // Show the button for pro users
+        }
+    </script>
 </body>
 </html>

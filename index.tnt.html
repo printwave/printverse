@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Membership</title>
+    <link rel="stylesheet" href="style.home.css">
+    <title>TNT</title>
 </head>
 <body>
-    <h1>Pro Membership</h1>
-    <p>Price: $5</p>
+    <h2>TNT</h2>
+    <a href="./index.tnt.html"><button class="button">TNT</button></a><br>
+    <img src="tnt3.JPG" alt="Tnt 1" width="200" height="200">
+    <img src="tnt2.JPG" alt="Tnt 1" width="200" height="200">
+    <img src="tnt1.JPG" alt="Tnt 1" width="200" height="200">
+
+    <!-- PayPal SDK script with your client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AfV9qON177fZE7hhq0CWGG5WT-VnkrdrtGmP58_KD0J4bc1fqrtSZXirri_iMwg4DyM580oFiUoroBSG&currency=USD"></script>
+
     <!-- PayPal button container -->
     <div id="paypal-button-container"></div>
 
-    <!-- Include PayPal SDK script with your client ID -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AfV9qON177fZE7hhq0CWGG5WT-VnkrdrtGmP58_KD0J4bc1fqrtSZXirri_iMwg4DyM580oFiUoroBSG&currency=USD"></script>
-
     <script>
-        var pro = false; // Initialize pro variable
-        
         // Render PayPal button
         paypal.Buttons({
             createOrder: function(data, actions) {
@@ -24,7 +27,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '5.00', // Set the amount dynamically if needed
+                            value: '1.00', // Set the amount dynamically if needed
                             currency_code: 'USD'
                         }
                     }]
@@ -35,7 +38,6 @@
                 return actions.order.capture().then(function(details) {
                     // Handle the successful transaction
                     alert('Transaction completed by ' + details.payer.name.given_name);
-                    pro = true; // Set pro to true upon successful payment
                     // Redirect or perform other actions after successful payment
                 });
             },
